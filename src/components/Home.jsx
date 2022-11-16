@@ -3,12 +3,13 @@ import Navbar from './Navbar';
 import { homeAnimation } from '../animation';
 import { motion } from 'framer-motion';
 import { Button } from 'antd';
+import Section1 from './Section1';
 
 
 
 function Home() {
   return (
-    <div>
+    <div className='bg-yellow-100'>
     <section className='section'>
         <Navbar />
        {/*<div className='absolute ml-96 min-w-full min-h-full bg-no-repeat rounded-br-2xl' style={{
@@ -30,7 +31,7 @@ function Home() {
       >
         <div className="content">
           <div className="title">
-            <h1 className=''>Welcome to <br/>Kenya</h1>
+            <h1 className=''>Welcome to<br/>Kenya</h1>
           </div>  
           <div className="subTitle font-semibold">
             <p>
@@ -44,7 +45,9 @@ function Home() {
 
     </section>
 
-    <div className='ml-10 text-2xl font-semibold'>Destinations</div>
+    <div className='ml-10 text-2xl font-semibold mt-8 text-yellow-900'>Travel with Us</div>
+
+    <div className=' ml-20 '> <Section1 /></div>
     </div>
   )
 }
