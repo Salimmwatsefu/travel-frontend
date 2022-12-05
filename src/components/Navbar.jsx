@@ -9,9 +9,11 @@ function Navbar() {
       <NavLink to="/">
       <p className='text-lg mt-2 -ml-38'>Qaribu <br/> <span className='text-3xl text-red-600 font-bold'>Ke<span className='text-green-600'>nya</span></span></p>
       </NavLink>
+
       <div className=''>
         <ul className='flex gap-14 mt-5 pl-80 font-semibold' >
-            <li>About Kenya</li>
+          <NavLink to={"/"}><li>Home</li></NavLink>
+            
             <NavLink to="tours" >
             <li><a>Available Tours</a></li>
             </NavLink>
@@ -19,8 +21,8 @@ function Navbar() {
             <NavLink to={"blog"}><li>Blog</li></NavLink>  
         </ul>
         </div>
-      <Button className='ml-40 bg-yellow-400/50 hover:bg-yellow-600 w-36 mt-5 rounded-2xl h-7' type="primary">
-      <SearchOutlined className='ml-28'/>
+      <Button className='ml-40 bg-yellow-400/50 hover:bg-yellow-600 w-36 mt-5 rounded-lg h-10 font-semibold' type="primary">
+      Login/Sign Up
      </Button>
     </div>
   )
