@@ -1,6 +1,35 @@
-import React from 'react'
+import { useState } from 'react';
 
-function SignUp() {
+function SignUp({onLogin}) {
+
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [passwordConfirmation, setPasswordConfirmation] = useState("");
+    const [errors, setErrors] = useState([]);
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        fetch("/signup", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            username,
+            email,
+            password,
+            password_confirmation: passwordConfirmation,
+        }),
+    }).then((r) => {
+        if (r.ok) {
+            r.json().then((user) => onLogin(user));
+        } else {
+            r.json().then((err) => setErrors(err.errors));
+        }
+    });
+    }
+
   return (
     
 
@@ -78,83 +107,79 @@ function SignUp() {
           </p>
         </div>
 
-        <form action="#" class="mt-8 grid grid-cols-6 gap-6">
+        <form  onSubmit={handleSubmit} class="mt-8 grid grid-cols-6 gap-6">
           <div class="col-span-6 sm:col-span-3">
             <label
-              for="FirstName"
+              htmlFor="FirstName"
               class="block text-sm font-medium text-gray-700"
             >
-              First Name
+              Username:
             </label>
 
             <input
               type="text"
-              id="FirstName"
-              name="first_name"
+              autoComplete="off"
+              id="username"
+              placeholder="  Enter your username..."
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
             />
           </div>
 
 
           <div class="col-span-6">
-            <label for="Email" class="block text-sm font-medium text-gray-700">
-              Email
+            <label htmlFor="Email" class="block text-sm font-medium text-gray-700">
+              Email:
             </label>
 
             <input
               type="email"
-              id="Email"
-              name="email"
+              id="email"
+              autoComplete="off"
+              placeholder="  Enter your email address..."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
             />
           </div>
 
           <div class="col-span-6 sm:col-span-3">
             <label
-              for="Password"
+              htmlFor="Password"
               class="block text-sm font-medium text-gray-700"
             >
-              Password
+              Password:
             </label>
 
             <input
               type="password"
-              id="Password"
-              name="password"
+              id="password"
+              placeholder="  Enter your password..."
+              value={password}
+              autoComplete="off"
+              onChange={(e) => setPassword(e.target.value)}
               class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
             />
           </div>
 
           <div class="col-span-6 sm:col-span-3">
             <label
-              for="PasswordConfirmation"
+              htmlFor="password_confirmation"
               class="block text-sm font-medium text-gray-700"
             >
-              Password Confirmation
+              Password Confirmation:
             </label>
 
             <input
               type="password"
-              id="PasswordConfirmation"
-              name="password_confirmation"
+              id="password_confirmation"
+              placeholder="  Re-enter your password..."
+              autoComplete="off"
+              value={passwordConfirmation}
+              onChange={(e) => setPasswordConfirmation(e.target.value)}
               class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
             />
-          </div>
-
-          <div class="col-span-6">
-            <label for="MarketingAccept" class="flex gap-4">
-              <input
-                type="checkbox"
-                id="MarketingAccept"
-                name="marketing_accept"
-                class="h-5 w-5 rounded-md border-gray-200 bg-white shadow-sm"
-              />
-
-              <span class="text-sm text-gray-700">
-                I want to receive emails about events, product updates and
-                company announcements.
-              </span>
-            </label>
           </div>
 
           <div class="col-span-6">

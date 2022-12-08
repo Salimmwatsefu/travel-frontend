@@ -1,6 +1,31 @@
-import React from 'react'
+import { useState } from 'react';
 
-function Login() {
+function Login({onLogin}) {
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setIsLoading(true);
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        r.json().then((user) => onLogin(user));
+      } else {
+        r.json().then((err) => setErrors(err.errors));
+      }
+    });
+  }
+
   return (
    
 <section class="relative flex flex-wrap lg:h-screen lg:items-center">
@@ -14,15 +39,20 @@ function Login() {
       </p>
     </div>
 
-    <form action="" class="mx-auto mt-8 mb-0 max-w-md space-y-4">
+    <form onSubmit={handleSubmit} class="mx-auto mt-8 mb-0 max-w-md space-y-4">
       <div>
-        <label for="email" class="sr-only">Email</label>
+        <label htmlFor="email" class="sr-only">Username:</label>
 
         <div class="relative">
           <input
-            type="email"
+            type="text"
+            id="username"
+            autoComplete="off"
+            placeholder=" Please enter your username..."
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
-            placeholder="Enter email"
+            
           />
 
           <span class="absolute inset-y-0 right-4 inline-flex items-center">
@@ -45,12 +75,16 @@ function Login() {
       </div>
 
       <div>
-        <label for="password" class="sr-only">Password</label>
+        <label htmlFor="password" class="sr-only">Password:</label>
         <div class="relative">
           <input
             type="password"
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
-            placeholder="Enter password"
+            id="password"
+            autoComplete="current-password"
+            placeholder=" Please enter your password..."
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
           <span class="absolute inset-y-0 right-4 inline-flex items-center">
@@ -88,6 +122,7 @@ function Login() {
           type="submit"
           class="ml-3 inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
         >
+            {isLoading ? "Loading..." : "Login"}
           Sign in
         </button>
       </div>
