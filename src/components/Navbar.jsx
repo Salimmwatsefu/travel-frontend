@@ -19,7 +19,7 @@ function Navbar() {
             </NavLink>
             <NavLink to={"destinations"}><li>Destinations</li></NavLink>
             <NavLink to={"blog"}><li>Blog</li></NavLink> 
-            <NavLink to={"blog"}><li>Contact Us</li></NavLink>  
+            <NavLink to={"customer"}><li>Contact Us</li></NavLink>  
         </ul>
         </div>
       <Button className='ml-40 bg-yellow-400/50 hover:bg-yellow-600 w-36 mt-5 rounded-lg h-10 font-semibold' type="primary">

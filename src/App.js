@@ -7,6 +7,8 @@ import {default as Tours} from './components/Tours';
 import {default as Blog} from './components/Blog';
 import {default as Destinations} from './components/Destinations';
 import Navbar from './components/Navbar';
+import ReviewItem from './components/reviews/ReviewItem';
+import ReviewPage from './components/reviews/ReviewPage';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
        <Route path='/tours' element={<Tours/>}/>
        <Route path='/blog' element={<Blog/>}/>
        <Route path='/destinations' element={<Destinations/>}/>
+       <Route path='/customer' element={<ReviewPage/>}/>
+
         
     </Routes>
   </BrowserRouter>
