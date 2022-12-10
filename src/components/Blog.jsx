@@ -31,7 +31,7 @@ function Blog() {
   />
 
   <div class="p-4 sm:p-6 bg-white">
-    <a href="#">
+    <a>
       <h3 class="text-lg font-medium text-gray-900 " key={myBlog.id}>
         {myBlog.title}
       </h3>
@@ -42,7 +42,6 @@ function Blog() {
     </p>
 
     <a
-      href="#"
       class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
     >
       Find out more

@@ -330,12 +330,16 @@ function Tours() {
               />
             </div>
 
+          
             <button
               type="submit"
               class="ml-3 block rounded bg-green-600 px-5 py-3 text-xs font-medium text-white hover:bg-green-500"
+            
             >
-              Add to Cart
+               <a href='/checkout'>Add to Cart</a>
+              
             </button>
+          
           </div>
         </form>
       </div>

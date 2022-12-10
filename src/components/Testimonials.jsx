@@ -2,33 +2,33 @@ import React from 'react'
 
 function Testimonials() {
   return (
-    <div class="container py-24 px-6 mx-auto">
+    <div className="container py-24 px-6 mx-auto">
 
-  <section class=" text-gray-800 text-center">
+  <section className=" text-gray-800 text-center">
     
-    <h2 class="text-3xl font-bold mb-12 text-yellow-800">Testimonials</h2>
+    <h2 className="text-3xl font-bold mb-12 text-yellow-800">Testimonials</h2>
 
     
 
-    <div class="grid md:grid-cols-3 ml-28">
+    <div className="grid md:grid-cols-3 ml-28">
         {/*card1*/}
-      <div class="mb-6 lg:mb-0 w-60">
-        <div class="bg-orange-200 block rounded-lg shadow-lg">
-          <div class="relative overflow-hidden bg-no-repeat bg-cover">
+      <div className="mb-6 lg:mb-0 w-60">
+        <div className="bg-orange-200 block rounded-lg shadow-lg">
+          <div className="relative overflow-hidden bg-no-repeat bg-cover">
             <img src="https://mdbootstrap.com/img/new/avatars/6.jpg" class="w-full rounded-t-lg" />
             <a href="#!">
-              <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
+              <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
             </a>
-            <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <svg className="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path fill="#fff"
                 d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
               </path>
             </svg>
           </div>
-          <div class="p-6">
-            <h5 class="text-lg font-bold mb-2">Halley Frank</h5>
-            <h6 class="font-medium text-blue-600 mb-4">Marketing Specialist</h6>
-            <ul class="flex justify-center mb-6">
+          <div className="p-6">
+            <h5 className="text-lg font-bold mb-2">Halley Frank</h5>
+            <h6 className="font-medium text-blue-600 mb-4">Marketing Specialist</h6>
+            <ul className="flex justify-center mb-6">
               <li>
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
                   class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">

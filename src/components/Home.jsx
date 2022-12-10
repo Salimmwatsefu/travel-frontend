@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './Navbar';
 import { homeAnimation } from '../animation';
 import { motion } from 'framer-motion';
 import { Button } from 'antd';
@@ -23,7 +22,7 @@ function Home() {
   </div>*/}
   <motion.div  variants={homeAnimation}
       transition={{ delay: 0.3, duration: 0.6, type: "tween" }}>
-     <div className=' absolute right-3.5 w-7/12 mt-28'>
+     <div className=' absolute right-3.5 w-7/12 mt-36'>
       <img src='/girl.png' />
      </div>
     </motion.div>
