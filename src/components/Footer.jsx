@@ -98,10 +98,10 @@ function Footer() {
           Useful links
         </h6>
         <p class="mb-4 mr-48">
-          <a href="#!" class="">Shop Now</a>
+          <a href="/" class="">Enquiries</a>
         </p>
         <p className='mr-48'>
-          <a href="#!" class="">Help</a>
+          <a href="/" class="">Help</a>
         </p>
       </div>
       <div class="">
