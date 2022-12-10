@@ -9,14 +9,14 @@ const initialState = {
 };
 
 function ReviewForm({ onAddReview }) {
-  const [formData, setFormData] = useState(initialState);
+  const [formData, setFormData] = useState(initialState)
+  const [name, setName] = useState("");
+  const [title, setTitle] = useState("");
+  const [image, setImage] = useState("");
+  const [review, setReview] = useState("");
+  const [rating, setRating] = useState("");
 
-  function handleChange(e) {
-    setFormData({
-      ...formData,
-      [e.target.id]: e.target.value,
-    });
-  }
+  
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -25,7 +25,7 @@ function ReviewForm({ onAddReview }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({name, title, image, review, rating}),
     })
       .then((r) => r.json())
       .then((newReview) => {
@@ -58,7 +58,7 @@ function ReviewForm({ onAddReview }) {
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm text-black"
             placeholder="Enter name"
             value={formData.name}
-            onChange={handleChange}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
       </div>
@@ -71,7 +71,7 @@ function ReviewForm({ onAddReview }) {
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Enter title"
             value={formData.title}
-            onChange={handleChange}
+            onChange={(e) => setTitle(e.target.value)}
           />
 
         </div>
@@ -85,7 +85,7 @@ function ReviewForm({ onAddReview }) {
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Enter image Url"
             value={formData.image}
-            onChange={handleChange}
+            onChange={(e) => setImage(e.target.value)}
           />
 
         </div>
@@ -98,7 +98,7 @@ function ReviewForm({ onAddReview }) {
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Enter Review"
             value={formData.review}
-            onChange={handleChange}
+            onChange={(e) => setReview(e.target.value)}
           />
 
         </div>
@@ -113,7 +113,7 @@ function ReviewForm({ onAddReview }) {
             placeholder="Rating"
             max="5"
             value={formData.rating}
-            onChange={handleChange}
+            onChange={(e) => setRating(e.target.value)}
           />
 
         </div>

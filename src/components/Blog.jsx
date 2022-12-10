@@ -6,7 +6,7 @@ function Blog() {
   const [myBlogs, setMyBlogs] = useState([]);
 
   const fetchBlog = async () => {
-    const response = await fetch("http://127.0.0.1:3000/blogs");
+    const response = await fetch("/blogs");
     const data = await response.json();
     return setMyBlogs(data);
   }

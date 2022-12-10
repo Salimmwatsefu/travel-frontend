@@ -6,7 +6,7 @@ function Tours() {
   const [myTours, setMyTours] = useState([]);
 
   const fetchTour = async () => {
-    const response = await fetch("http://127.0.0.1:3000/tours");
+    const response = await fetch("/tours");
     const data = await response.json();
     return setMyTours(data);
   }

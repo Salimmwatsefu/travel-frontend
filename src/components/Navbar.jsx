@@ -23,7 +23,7 @@ function Navbar() {
         </ul>
         </div>
       <Button className='ml-40 bg-yellow-400/50 hover:bg-yellow-600 w-36 mt-5 rounded-lg h-10 font-semibold' type="primary">
-      Login/Sign Up
+        Login
      </Button>
     </div>
   )

@@ -1,4 +1,7 @@
 import { useState } from 'react';
+ import { Navigate } from "react-router-dom";
+
+
 
 function SignUp({onLogin}) {
 
@@ -7,6 +10,8 @@ function SignUp({onLogin}) {
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
     const [errors, setErrors] = useState([]);
+
+
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -36,12 +41,12 @@ function SignUp({onLogin}) {
 <section class="bg-white">
   <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
     <section
-      class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
+      class="relative flex h-32 items-end bg-amber-500 lg:col-span-5 lg:h-full xl:col-span-6"
     >
       <img
         alt="Night"
-        src="https://images.unsplash.com/photo-1617195737496-bc30194e3a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-        class="absolute inset-0 h-full w-full object-cover opacity-80"
+        src="https://images.unsplash.com/photo-1535683939029-0030b4de2382?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHRyYXZlbCUyMGtlbnlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+        class="absolute inset-0 h-full w-full object-contain opacity-80"
       />
 
       <div class="hidden lg:relative lg:block lg:p-12">
@@ -61,12 +66,11 @@ function SignUp({onLogin}) {
         </a>
 
         <h2 class="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
-          Welcome to Squid 🦑
+          Welcome to Kenya
         </h2>
 
         <p class="mt-4 leading-relaxed text-white/90">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
-          dolorum aliquam, quibusdam aperiam voluptatum.
+          Please Sign Up to continue if you do not have an account
         </p>
       </div>
     </section>
@@ -204,7 +208,10 @@ function SignUp({onLogin}) {
               Already have an account?
               <a href="#" class="text-gray-700 underline">Log in</a>.
             </p>
+
+        
           </div>
+          
         </form>
       </div>
     </main>
@@ -214,4 +221,4 @@ function SignUp({onLogin}) {
   )
 }
 
-export default SignUp
+export default SignUp 
