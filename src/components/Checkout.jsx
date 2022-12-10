@@ -179,7 +179,7 @@ function Checkout() {
             <button
               class="block w-full rounded-md bg-black p-2.5 text-sm text-white transition hover:shadow-lg"
             >
-              Get Quote
+              <a href='/popup'>Get Quote</a>
             </button>
           </div>
         </form>
