@@ -40,60 +40,60 @@ function Tours() {
     </div>
     {myTours.map((myTour, index) => (
 <section>
-  <div class="relative mx-auto max-w-screen-xl px-4 bg-white mb-10">
-    <div class="grid grid-cols-1 items-start gap-8 md:grid-cols-2 ">
-      <div class="grid grid-cols-2 gap-4 md:grid-cols-1">
+  <div className="relative mx-auto max-w-screen-xl px-4 bg-white mb-10">
+    <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-2 ">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-1">
         <img
           alt="Les Paul"
           src={myTour.image3}
-          class=" w-full rounded-xl object-cover"
+          className=" w-full rounded-xl object-cover"
         />
 
-        <div class="grid grid-cols-2 gap-4 lg:mt-4">
+        <div className="grid grid-cols-2 gap-4 lg:mt-4">
           <img
             alt="Les Paul"
             src={myTour.image2}
-            class="aspect-square w-full rounded-xl object-cover"
+            className="aspect-square w-full rounded-xl object-cover"
           />
 
           <img
             alt="Les Paul"
             src={myTour.image1}
-            class="aspect-square w-full rounded-xl object-cover"
+            className="aspect-square w-full rounded-xl object-cover"
           />
 
           <img
             alt="Les Paul"
             src={myTour.image4}
-            class="aspect-square w-full rounded-xl object-cover"
+            className="aspect-square w-full rounded-xl object-cover"
           />
 
           <img
             alt="Les Paul"
             src={myTour.image5}
-            class="aspect-square w-full rounded-xl object-cover"
+            className="aspect-square w-full rounded-xl object-cover"
           />
         </div>
       </div>
 
-      <div class="sticky top-0">
+      <div className="sticky top-0">
         <strong
-          class="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600"
+          className="rounded-full border border-blue-600 bg-gray-100 px-3 py-0.5 text-xs font-medium tracking-wide text-blue-600"
         >
           Pre Order
         </strong>
 
-        <div class="mt-8 flex justify-between">
-          <div class="max-w-[35ch]">
-            <h1 class="text-2xl font-bold">
+        <div className="mt-8 flex justify-between">
+          <div className="max-w-[35ch]">
+            <h1 className="text-2xl font-bold">
               {myTour.title}
             </h1>
 
-            <p class="mt-0.5 text-sm">Highest Rated Product</p>
+            <p className="mt-0.5 text-sm">Highest Rated Product</p>
 
-            <div class="mt-2 -ml-0.5 flex">
+            <div className="mt-2 -ml-0.5 flex">
               <svg
-                class="h-5 w-5 text-yellow-400"
+                className="h-5 w-5 text-yellow-400"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -104,7 +104,7 @@ function Tours() {
               </svg>
 
               <svg
-                class="h-5 w-5 text-yellow-400"
+                className="h-5 w-5 text-yellow-400"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -115,7 +115,7 @@ function Tours() {
               </svg>
 
               <svg
-                class="h-5 w-5 text-yellow-400"
+                className="h-5 w-5 text-yellow-400"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -126,7 +126,7 @@ function Tours() {
               </svg>
 
               <svg
-                class="h-5 w-5 text-yellow-400"
+                className="h-5 w-5 text-yellow-400"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -137,7 +137,7 @@ function Tours() {
               </svg>
 
               <svg
-                class="h-5 w-5 text-gray-200"
+                className="h-5 w-5 text-gray-200"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
@@ -149,27 +149,27 @@ function Tours() {
             </div>
           </div>
 
-          <p class="text-lg font-bold">${myTour.price}</p>
+          <p className="text-lg font-bold">${myTour.price}</p>
         </div>
 
-        <details class="group relative mt-4">
-          <summary class="block">
+        <details className="group relative mt-4">
+          <summary className="block">
             <div>
-              <div class="prose max-w-none group-open:hidden">
+              <div className="prose max-w-none group-open:hidden">
                 <p>
                   {myTour.description1}
                 </p>
               </div>
 
               <span
-                class="mt-4 cursor-pointer text-sm font-medium underline group-open:absolute group-open:bottom-0 group-open:left-0 group-open:mt-0"
+                className="mt-4 cursor-pointer text-sm font-medium underline group-open:absolute group-open:bottom-0 group-open:left-0 group-open:mt-0"
               >
                 Read More
               </span>
             </div>
           </summary>
 
-          <div class="prose max-w-none pb-6">
+          <div className="prose max-w-none pb-6">
             <p>
               {myTour.description1}
             </p>
@@ -180,22 +180,22 @@ function Tours() {
           </div>
         </details>
 
-        <form class="mt-8">
+        <form className="mt-8">
           <fieldset>
-            <legend class="mb-1 text-sm font-medium">Package</legend>
+            <legend className="mb-1 text-sm font-medium">Package</legend>
 
-            <div class="flow-root">
-              <div class="-m-0.5 flex flex-wrap">
+            <div className="flow-root">
+              <div className="-m-0.5 flex flex-wrap">
                 <label for="color_tt" class="cursor-pointer p-0.5">
                   <input
                     type="radio"
                     name="color"
                     id="color_tt"
-                    class="peer sr-only"
+                    className="peer sr-only"
                   />
 
                   <span
-                    class="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                    className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
                   >
                     Normal
                   </span>
@@ -206,11 +206,11 @@ function Tours() {
                     type="radio"
                     name="color"
                     id="color_fr"
-                    class="peer sr-only"
+                    className="peer sr-only"
                   />
 
                   <span
-                    class="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                    className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
                   >
                     Semi-Luxury
                   </span>
@@ -221,11 +221,11 @@ function Tours() {
                     type="radio"
                     name="color"
                     id="color_cb"
-                    class="peer sr-only"
+                    className="peer sr-only"
                   />
 
                   <span
-                    class="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
+                    className="group inline-block rounded-full border px-3 py-1 text-xs font-medium peer-checked:bg-black peer-checked:text-white"
                   >
                     Luxury
                   </span>
