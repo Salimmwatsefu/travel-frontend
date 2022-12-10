@@ -234,90 +234,9 @@ function Tours() {
             </div>
           </fieldset>
 
-          <fieldset class="mt-4">
-            <legend class="mb-1 text-sm font-medium">Size</legend>
+          
 
-            <div class="flow-root">
-              <div class="-m-0.5 flex flex-wrap">
-                <label for="size_xs" class="cursor-pointer p-0.5">
-                  <input
-                    type="radio"
-                    name="size"
-                    id="size_xs"
-                    class="peer sr-only"
-                  />
-
-                  <span
-                    class="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                  >
-                    XS
-                  </span>
-                </label>
-
-                <label for="size_s" class="cursor-pointer p-0.5">
-                  <input
-                    type="radio"
-                    name="size"
-                    id="size_s"
-                    class="peer sr-only"
-                  />
-
-                  <span
-                    class="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                  >
-                    S
-                  </span>
-                </label>
-
-                <label for="size_m" class="cursor-pointer p-0.5">
-                  <input
-                    type="radio"
-                    name="size"
-                    id="size_m"
-                    class="peer sr-only"
-                  />
-
-                  <span
-                    class="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                  >
-                    M
-                  </span>
-                </label>
-
-                <label for="size_l" class="cursor-pointer p-0.5">
-                  <input
-                    type="radio"
-                    name="size"
-                    id="size_l"
-                    class="peer sr-only"
-                  />
-
-                  <span
-                    class="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                  >
-                    L
-                  </span>
-                </label>
-
-                <label for="size_xl" class="cursor-pointer p-0.5">
-                  <input
-                    type="radio"
-                    name="size"
-                    id="size_xl"
-                    class="peer sr-only"
-                  />
-
-                  <span
-                    class="group inline-flex h-8 w-8 items-center justify-center rounded-full border text-xs font-medium peer-checked:bg-black peer-checked:text-white"
-                  >
-                    XL
-                  </span>
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <div class="mt-8 flex">
+          <div class="mt-20 flex">
             <div>
               <label for="quantity" class="sr-only">Qty</label>
 
