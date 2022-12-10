@@ -7,6 +7,7 @@ import ReviewHeader from './ReviewHeader';
 function ReviewPage() {
 
   const [reviews, setReviews] = useState([]);
+  const [rating, setRating] = useState([])
 
   useEffect(() => {
     fetch("/reviews")

@@ -62,7 +62,7 @@ function ReviewItem({ revieww, onUpdateReview, onDeleteReview }) {
           <div>
 
            Rating:{" "}
-          <StarRating percentage={rating / 5} onClick={handleUpdateRating} />
+          <StarRating percentage={rating / rating} onClick={handleUpdateRating} />
           </div>
           <div className='flex justify-center items-center gap-5'>
           <button

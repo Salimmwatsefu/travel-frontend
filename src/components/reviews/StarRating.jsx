@@ -12,10 +12,10 @@ function StarRating({ percentage, onClick }) {
 
   return (
     <div className="star-rating" onClick={handleClick} ref={elementRef}>
-      <span className="foreground" style={{ width: widthPct }}>
+      <span className="foreground text-amber-500" style={{ width: widthPct }}>
         ★★★★★
       </span>
-      <span className="background">★★★★★</span>
+      
     </div>
   );
 }
