@@ -35,7 +35,7 @@ function ReviewForm({ onAddReview }) {
   }
 
   return (
-    <div className=" bg-yellow-100">
+    <div className=" bg-yellow-100 mt-20">
 
 <section class="relative flex flex-wrap lg:h-screen lg:items-center">
   <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
@@ -112,7 +112,7 @@ function ReviewForm({ onAddReview }) {
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Rating"
             max="5"
-            value={formData.rating}
+            value={rating}
             onChange={(e) => setRating(e.target.value)}
           />
 

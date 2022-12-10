@@ -41,9 +41,9 @@ function ReviewItem({ revieww, onUpdateReview, onDeleteReview }) {
 
     
 
-      <div className='bg-white w-96 rounded-2xl my-20'>
+      <div className='bg-white w-96 rounded-2xl'>
         <img
-          alt="Woman"
+          alt="profile"
           src={image}
           class="mx-auto h-24 w-24 rounded-full object-cover shadow-xl mt-10"
         />

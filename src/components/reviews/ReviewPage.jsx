@@ -35,7 +35,7 @@ function ReviewPage() {
     <div className='bg-yellow-100'>
       <ReviewHeader />
     
-      <div className='flex gap-16 bg-yellow-100'>
+      <div className='flex gap-16 bg-yellow-100 flex-wrap'>
       {reviews.map((revieww) => (
         <ReviewItem key={revieww.id}
         revieww={revieww}
