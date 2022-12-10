@@ -57,7 +57,7 @@ function ReviewForm({ onAddReview }) {
             type="text"
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm text-black"
             placeholder="Enter name"
-            value={formData.name}
+            value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
@@ -70,7 +70,7 @@ function ReviewForm({ onAddReview }) {
             type="text"
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Enter title"
-            value={formData.title}
+            value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
 
@@ -84,7 +84,7 @@ function ReviewForm({ onAddReview }) {
             type="text"
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Enter image Url"
-            value={formData.image}
+            value={image}
             onChange={(e) => setImage(e.target.value)}
           />
 
@@ -97,7 +97,7 @@ function ReviewForm({ onAddReview }) {
           <textarea
             class="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm shadow-sm"
             placeholder="Enter Review"
-            value={formData.review}
+            value={review}
             onChange={(e) => setReview(e.target.value)}
           />
 
