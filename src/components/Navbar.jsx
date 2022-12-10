@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <div className='text-white flex justify-center items-center relative  navbar'>
+    <div className='text-white flex justify-center items-center relative  navbar sm:px-6 lg:px-8 md:justify-between'>
       <NavLink to="/">
       <p className='text-lg mt-2 -ml-38'>Qaribu <br/> <span className='text-3xl text-red-600 font-bold'>Ke<span className='text-green-600'>nya</span></span></p>
       </NavLink>
 
-      <div className=''>
+      <div className='md:block'>
         <ul className='flex gap-14 mt-5 pl-80 font-semibold' >
           <NavLink to={"/"}><li>Home</li></NavLink>
             
